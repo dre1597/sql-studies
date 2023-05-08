@@ -14,7 +14,7 @@ CREATE TABLE "swipes" (
     "id" INTEGER,
     "card_id" INTEGER,
     "station_id" INTEGER,
-    "action" TEXT NOT NULL CHECK("type" IN ('enter', 'exit', 'deposit')),
+    "action" TEXT NOT NULL CHECK("action" IN ('enter', 'exit', 'deposit')),
     "datetime" NUMERIC NOT NULL DEFAULT CURRENT_TIMESTAMP,
     "amount" NUMERIC NOT NULL CHECK("amount" != 0),
     PRIMARY KEY("id"),
